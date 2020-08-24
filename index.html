@@ -9,6 +9,8 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="src/style.css" />
 
     <title>Weather App</title>
@@ -18,14 +20,12 @@
       <div class="weatherapp-wrapper">
         <div class="weather-app">
           <div class="overview">
-            <h1>
-              Leixlip
-            </h1>
+            <h1 id="city"></h1>
             <ul>
               <li>
                 Friday 05:00
               </li>
-              <li>
+              <li id="description">
                 Cloudy
               </li>
             </ul>
@@ -39,7 +39,7 @@
                   class="float-left"
                 />
                 <div class="float-left">
-                  <strong> 17</strong>
+                  <strong id="temperature"></strong>
                   <span class="units">°C | <a href="#">°F</a></span>
                 </div>
               </div>
@@ -47,14 +47,10 @@
             <div class="col-6">
               <ul>
                 <li>
-                  Precipitation: 0%
+                  Humidity:
+                  <span id="humidity"></span>%
                 </li>
-                <li>
-                  Humidity: 73%
-                </li>
-                <li>
-                  Wind: 2km/h
-                </li>
+                <li>Wind: <span id="wind"></span> Km/h</li>
               </ul>
             </div>
           </div>
